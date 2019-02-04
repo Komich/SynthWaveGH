@@ -9,17 +9,13 @@ public class playerController : MonoBehaviour
     public float zPosition = 10f;
     public float moveSpeed;
     public Vector3 mousePos;
+    float rotValue = 0f;
 
     void Move()
     {
-        
-    }
-
-    void Update()
-    {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //Vector3 curPos = Vector3.Lerp(transform.position,new Vector3(mousePos.x, yPosition, zPosition), moveSpeed * Time.deltaTime);
-        //transform.position = curPos;
+        mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zPosition));
+        Vector3 curPos = Vector3.Lerp(transform.position, new Vector3(mousePos.x, yPosition, zPosition), moveSpeed * Time.deltaTime);
+        transform.position = curPos;
 
         if (transform.position.x > 6)
         {
@@ -29,5 +25,20 @@ public class playerController : MonoBehaviour
         {
             transform.position = new Vector3(-6, transform.position.y, transform.position.z);
         }
+    }
+    void Rotate()
+    {
+        if (rotValue == 0)
+        {
+            rotValue += Time.deltaTime;
+        }
+        else if (rotValue >= 1) rotValue -= Time.deltaTime;
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 90), rotValue);
+        print(rotValue);
+    }
+    void Update()
+    {
+        Move();
+        Rotate();
     }
 }

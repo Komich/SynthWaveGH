@@ -15,12 +15,10 @@ public class roadBuilder : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if ((transform.position.z - playerController.playerInfo.playerPosStat.z) == 325 || (transform.position.z - playerController.playerInfo.playerPosStat.z) == 324 || (transform.position.z - playerController.playerInfo.playerPosStat.z) == 323)
+        if ((transform.position.z - playerController.playerInfo.playerPosStat.z) <= 325)
         {
             Instantiate(road, transform.position, Quaternion.identity);
             Destroy(this);
         }
-
-        Debug.Log(Mathf.Round(transform.position.z - playerController.playerInfo.playerPosStat.z));
     }
 }

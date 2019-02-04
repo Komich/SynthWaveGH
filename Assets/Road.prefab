@@ -190,7 +190,7 @@ MonoBehaviour:
   obstWall: {fileID: 6962585288617442767, guid: 3b580a07b5f23eb498ed1a9a2e2cb13e,
     type: 3}
   spawnRandom: 0
-  spawnChance: 90
+  spawnChance: 10
 --- !u!1 &3757251118522963655
 GameObject:
   m_ObjectHideFlags: 0

@@ -335,7 +335,7 @@ PrefabInstance:
     - target: {fileID: 2194557827395266954, guid: 9aee08eeb91f5e84f8a662a9b6b6ecce,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 325
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 2194557827395266954, guid: 9aee08eeb91f5e84f8a662a9b6b6ecce,
         type: 3}
@@ -377,11 +377,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1756239032, guid: 9aee08eeb91f5e84f8a662a9b6b6ecce, type: 3}
-      propertyPath: road
-      value: 
-      objectReference: {fileID: 2194557827395266954, guid: 9aee08eeb91f5e84f8a662a9b6b6ecce,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9aee08eeb91f5e84f8a662a9b6b6ecce, type: 3}
 --- !u!1 &1198933989
@@ -566,7 +561,7 @@ GameObject:
   - component: {fileID: 2097813919}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: RoadObstacle
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
